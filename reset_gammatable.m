@@ -16,10 +16,10 @@ function prev_gt = reset_gammatable(which_gt)
 
 if nargin < 1 || isempty(which_gt)
     % look up which computer we're on
-    % AZ: TCS-XPS
-    this_computer = getenv('computername');
+    % AZ: TCS-2107TestingAZ
+    [~,this_computer] = system('hostname');
     
-    if strcmpi(this_computer,'TCS-XPS') % AZ
+    if contains(this_computer,'tcs-2107testingaz') % AZ
         which_gt = 'defaultgamma_AZ_2020-01-21.mat';
     else
         error('Unrecognized computer - define gamma table file in input');
