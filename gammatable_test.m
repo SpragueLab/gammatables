@@ -8,7 +8,11 @@
 %
 % TCS 1/21/2020
 
-which_gt = 'gammatable_tcs_2020-01-21.mat';
+% adventure zone
+%which_gt = 'gammatable_tcs_2020-01-21.mat';
+
+% smash ultimate
+which_gt = 'gammatable_SU_2020-02-20.mat';
 
 n_levels = 10;
 

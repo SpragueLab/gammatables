@@ -19,8 +19,11 @@ if nargin < 1 || isempty(which_gt)
     % AZ: TCS-2107TestingAZ
     [~,this_computer] = system('hostname');
     
-    if contains(this_computer,'tcs-2107testingaz') % AZ
+    if     contains(this_computer,'tcs-2107testingaz') % AZ
         which_gt = 'defaultgamma_AZ_2020-01-21.mat';
+    elseif contains(this_computer,'tcs-2107testsu') % SU
+        which_gt = 'defaultgamma_SU_2020-02-20.mat';
+    
     else
         error('Unrecognized computer - define gamma table file in input');
     end
